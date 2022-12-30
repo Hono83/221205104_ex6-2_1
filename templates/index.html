@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <title>WebAPI</title>
+</head>
+<body>
+
+<h1>このページはFlaskで表示しています！</h1>
+
+<hr>
+
+<h1>API の使い方</h1>
+<p>以下URLにGETでアクセスする．指定された数値を正方形の１辺の長さとして，</p>
+<p>正方形とそれに内接する円の面積とを返す．</p>
+<p>http://127.0.0.1:5000/calc_square/数値</p>
+<p>curlによる使用例：<code>curl http://localhost:5000/calc_square/数値</code></p>
+
+<h2>API の使い方 2</h2>
+<p>以下のテキストボックスに正方形1辺の長さを入力し、</p>
+<p>Submit!をクリックする事でも同じことができる。</p>
+<form method="get" action="calc_square_app">
+    <label for="number">正方形の一片の長さを入力してください。: </label><input time="text" name="number">
+    <input type="submit" value="Submit!">
+</form>
+
+</body>
+</html>
